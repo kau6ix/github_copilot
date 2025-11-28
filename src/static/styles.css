@@ -188,16 +188,25 @@ footer {
   color: #555;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
   border-bottom: 1px solid #e8e8e8;
+  list-style: none;
 }
 
 .participant-item:last-child {
   border-bottom: none;
 }
 
+.participant-item span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
 /* avatar dot */
-.participant-item::before {
+.participant-item span::before {
   content: "";
   display: inline-block;
   width: 8px;
@@ -205,6 +214,27 @@ footer {
   background: #66bb6a;
   border-radius: 50%;
   flex: 0 0 8px;
+}
+
+/* delete button styling */
+.delete-participant {
+  background-color: #e53935;
+  padding: 4px 8px;
+  font-size: 14px;
+  min-width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  flex: 0 0 28px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.delete-participant:hover {
+  background-color: #c62828;
+  transform: scale(1.1);
+}
+
+.delete-participant:active {
+  transform: scale(0.95);
 }
 
 /* when no participants */
